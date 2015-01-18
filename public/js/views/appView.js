@@ -9,7 +9,7 @@ app.AppView = Backbone.View.extend({
     console.log('init');
     this.render();
     // listen to the router
-    this.listenTo(app.Router, 'route:phone', this.renderCharts);
+    this.listenTo(app.Router, 'route:handle', this.renderCharts);
   },
   render: function() {
     // get a model from the collection
