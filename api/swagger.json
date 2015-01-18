@@ -15,6 +15,37 @@
   ],
   "basePath": "/api",
   "paths": {
+    "/v1/handle/{hid}": {
+      "get": {
+        "x-swagger-router-controller": "handles",
+        "operationId": "readHandle",
+        "tags": ["/handles"],
+        "description": "Return the details for a specific twitter handle",
+        "parameters": [
+        {
+          "name": "hid",
+          "in": "path",
+          "description": "Handle of the specific user",
+          "required": true,
+          "type": "string"
+        }
+        ],
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "Ok"
+            }
+          }
+        }
+      }
+    },
     "/v1/phone/{pid}": {
       "get": {
         "x-swagger-router-controller": "measurement",
