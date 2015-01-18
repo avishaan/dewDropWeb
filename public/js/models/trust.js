@@ -6,8 +6,9 @@ app.Trust = Backbone.Model.extend({
   },
   urlRoot: 'https://dewdrop.neyer.me/trust/statements-about-user/',
   toJSON: function() {
-    //var json = Backbone.Model.prototype.toJSON.apply(this, arguments);
-    //json.cid = this.cid;
-    //return json;
+    debugger;
+    var json = Backbone.Model.prototype.toJSON.apply(this, arguments);
+    json.cid = this.cid;
+    return json;
   }
 });

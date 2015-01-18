@@ -10,11 +10,15 @@ app.HandleView = Backbone.View.extend({
     this.listenTo(this.collection, 'reset', this.render);
     console.log('init handleView');
   },
+  parseData: function() {
+    var data;
+    debugger;
+  },
   render: function() {
     // get a model from the collection
     // render some stuff to the view
     console.log('render');
-    console.log(this.collection);
+    this.parseData();
     return this;
   }
 });
