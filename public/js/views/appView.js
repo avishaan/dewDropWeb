@@ -27,8 +27,8 @@ app.AppView = Backbone.View.extend({
     this.renderChartView(id);
   },
   renderChartView: function(id) {
-    this.chartView = new app.ChartView({id: id});
-    this.$el.append(this.chartView.el);
+    this.handleView = new app.HandleView({id: id});
+    this.$el.append(this.handleView.el);
     this.inputView.close();
   },
   navigate: function(event) {
@@ -36,6 +36,6 @@ app.AppView = Backbone.View.extend({
     event.preventDefault();
     // go to url based on the input field
     var field = this.$el.find('#handle').val();
-    app.Router.navigate("/handle/+" + field, {trigger: true});
+    app.Router.navigate("/handle/" + field, {trigger: true});
   }
 });
