@@ -10,5 +10,11 @@ module.exports.readHandle = function readHandle (req, res, next) {
   // make sure to unescape any characters
   hid = querystring.unescape(hid);
   // make the call to Mark's api here and return data to FE
-  res.status(200).send({test: 'test ok'});
+  res.status(200).send({
+    id: '123',
+    _id: '123',
+    trust: '101',
+    troll: '102',
+    test: 'test ok'
+  });
 };
