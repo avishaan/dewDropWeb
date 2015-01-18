@@ -14,6 +14,7 @@ app.HandleView = Backbone.View.extend({
     // get a model from the collection
     // render some stuff to the view
     console.log('render');
+    console.log(this.collection);
     return this;
   }
 });
