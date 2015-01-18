@@ -17,7 +17,7 @@
   "paths": {
     "/v1/handle/{hid}": {
       "get": {
-        "x-swagger-router-controller": "handles",
+        "x-swagger-router-controller": "handle",
         "operationId": "readHandle",
         "tags": ["/handles"],
         "description": "Return the details for a specific twitter handle",
