@@ -10,6 +10,8 @@ app.AppView = Backbone.View.extend({
     this.render();
     // listen to the router
     this.listenTo(app.Router, 'route:handle', this.renderCharts);
+    // if we are already at the correct route, go ahead and render the charts right away
+    debugger;
   },
   render: function() {
     // get a model from the collection
