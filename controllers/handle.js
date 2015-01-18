@@ -8,7 +8,7 @@ module.exports.readHandle = function readHandle (req, res, next) {
   var hid = req.swagger.params.hid.value;
   logger.info('Lookup user twitter handle ' + hid);
   // make sure to unescape any characters
-  pid = querystring.unescape(pid);
+  hid = querystring.unescape(hid);
   // make the call to Mark's api here and return data to FE
   res.status(200).send({test: 'test ok'});
 };
