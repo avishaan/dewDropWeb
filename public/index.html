@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Hexna Auto Sublease</title>
+        <link rel="stylesheet" href="css/screen.css">
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body>
+        <header>
+            <h1> Hexna Auto Sublease </h1>
+            <hr>
+        </header>
+
+        <div class='container-fluid' id='template'>
+            <div class="row">
+                <div class ="col-sm-5">
+                    <h4 class='title'>New Sublease</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class ="col-sm-10">
+                    <form class="form-horizontal" role="form" id="templateView"></form>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <table border="0" style="margin-left:auto; margin-right:auto;">
+                <tr><td><span>&copy;</span> 2014 by Hexna Corp.<span>&trade;</span></td></tr>
+                <tr><td><a href="index.html">http://hexna.com</a></td></tr>
+            </table>
+        </div>
+        </footer>
+
+        <script type="text/template" id="submitButtonTemplate">
+          <button type="button" class="btn btn-success" id="submit">Submit</button>
+        </script>
+        
+        <script src="libs/jquery/dist/jquery.js"></script>
+        <script src="libs/underscore/underscore.js"></script>
+        <script src="libs/backbone/backbone.js"></script>
+        
+        <script src="js/models/template.js"></script>
+        <script src="js/models/question.js"></script>
+        <script src="js/collections/template.js"></script>
+        <script src="js/views/questionView.js"></script>
+        <script src="js/views/templateView.js"></script>
+        
+        <script src="js/app.js"></script>
+    </body>
+</html>
