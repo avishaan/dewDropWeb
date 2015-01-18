@@ -1,7 +1,7 @@
 {
-  "name": "sugar-log",
+  "name": "trustOrTroll",
   "version": "0.0.1",
-  "description": "Sugar Log API",
+  "description": "Trust or Troll",
   "main": "app.js",
   "keywords": [
     "swagger",
