@@ -2,6 +2,7 @@ var querystring = require('querystring');
 var logger = require('./../loggers/logger.js');
 var User = require('./../models/user.js');
 var config = require('../config.js');
+var superagent = require('superagent');
 
 module.exports.readHandle = function readHandle (req, res, next) {
   // get the handle id from the route

@@ -7,6 +7,7 @@ app.Trusts = Backbone.Collection.extend({
   },
     //url: '/api/v1/phone'
     url: function() {
-      return '/api/v1/handle/' + this.id;
+      return 'https://dewdrop.neyer.me/trust/statements-about-user/' + this.id;
+      //return '/api/v1/handle/' + this.id;
     }
 });
