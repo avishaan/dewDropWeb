@@ -35,7 +35,7 @@ app.AppView = Backbone.View.extend({
     // prevent the url from having a ?
     event.preventDefault();
     // go to url based on the input field
-    var field = this.$el.find('#phone').val();
-    app.Router.navigate("/phone/+" + field, {trigger: true});
+    var field = this.$el.find('#handle').val();
+    app.Router.navigate("/handle/+" + field, {trigger: true});
   }
 });
