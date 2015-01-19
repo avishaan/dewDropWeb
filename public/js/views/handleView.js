@@ -75,8 +75,9 @@ app.HandleView = Backbone.View.extend({
     };
 
     // The trust gauge
-    var $trust = this.$el.append('#container-trust');
-    this.$el.highcharts(Highcharts.merge(gaugeOptions, {
+    var $trust = $('<div></div>').addClass('trustiness');
+    this.$el.append($trust);
+    $trust.highcharts(Highcharts.merge(gaugeOptions, {
         yAxis: {
             min: 0,
             max: 200,
@@ -105,7 +106,9 @@ app.HandleView = Backbone.View.extend({
     }));
 
     // The troll gauge
-    this.$el.append.highcharts(Highcharts.merge(gaugeOptions, {
+    var $troll = $('<div></div>').addClass('trolliness');
+    this.$el.append($troll);
+    $troll.highcharts(Highcharts.merge(gaugeOptions, {
         yAxis: {
             min: 0,
             max: 50,

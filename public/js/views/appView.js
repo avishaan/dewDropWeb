@@ -11,7 +11,10 @@ app.AppView = Backbone.View.extend({
     // listen to the router
     this.listenTo(app.Router, 'route:handle', this.renderCharts);
     // if we are already at the correct route, go ahead and render the charts right away
-    debugger;
+    if (URI(window.location).hash().length > 5){
+      // trigger route and pass correct argument coming from router which will do the parsing and return the id
+      app.Router.trigger('route:handle', window.location.hash.split('/')[1]);
+    }
   },
   render: function() {
     // get a model from the collection

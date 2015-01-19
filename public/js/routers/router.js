@@ -7,6 +7,7 @@ var Router = Backbone.Router.extend({
   },
   handle: function(param) {
     console.log('route @ handle');
+    return param;
   },
   phone: function(param) {
     console.log('route @ phone');
