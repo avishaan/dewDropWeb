@@ -3,6 +3,7 @@ var app = app || {};
 app.HandleView = Backbone.View.extend({
   tag: 'div',
   parsedData: {},
+  user: {},
   initialize: function() {
     this.collection = new app.Trusts({id: this.id});
     this.collection.fetch({reset: true});
@@ -11,8 +12,9 @@ app.HandleView = Backbone.View.extend({
     console.log('init handleView');
   },
   parseData: function() {
-    var data;
-    var trust = this.collection.models[0].toJSON();
+    this.user = this.collection.models[0].toJSON();
+    this.user.troll = parseInt(this.user.totals.TROLL);
+    this.user.trust = parseInt(this.user.totals.TRUST);
   },
   render: function() {
     // get a model from the collection
@@ -79,8 +81,13 @@ app.HandleView = Backbone.View.extend({
     this.$el.append($trust);
     $trust.highcharts(Highcharts.merge(gaugeOptions, {
         yAxis: {
+          stops: [
+            [0.1, '#DF5353'], // red
+            [0.5, '#DDDF0D'], // yellow
+            [0.9, '#55BF3B'] // green
+          ],
             min: 0,
-            max: 200,
+            max: this.user.trust + this.user.troll,
             title: {
                 text: 'Trust'
             }
@@ -92,7 +99,7 @@ app.HandleView = Backbone.View.extend({
 
         series: [{
             name: 'Trust',
-            data: [80],
+            data: [this.user.trust],
             dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
                     ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
@@ -111,7 +118,7 @@ app.HandleView = Backbone.View.extend({
     $troll.highcharts(Highcharts.merge(gaugeOptions, {
         yAxis: {
             min: 0,
-            max: 50,
+            max: this.user.trust + this.user.troll,
             title: {
                 text: 'troll'
             }
@@ -119,11 +126,11 @@ app.HandleView = Backbone.View.extend({
 
         series: [{
             name: 'troll',
-            data: [5],
+            data: [this.user.troll],
             dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
                     ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y:.1f}</span><br/>' +
-                       '<span style="font-size:12px;color:silver">* trolliness</span></div>'
+                       '<span style="font-size:12px;color:silver"> trolliness</span></div>'
             },
             tooltip: {
                 valueSuffix: ' trolliness'
