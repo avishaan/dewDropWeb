@@ -1,7 +1,7 @@
-DewDropWeb
+dewDropWeb
 ========
 
-DewDropWeb is the UI element to https://github.com/neyer/dewDrop It allows a user to quickly see
+dewDropWeb is the UI element to https://github.com/neyer/dewDrop It allows a user to quickly see
 the relatively trustiness and trolliness for a user.
 
 Usage
