@@ -1,36 +1,12 @@
-Hexna Sublease-Node
+DewDropWeb
 ========
 
-Connect, Mongoose, Node, Swagger
+DewDropWeb is the UI element to https://github.com/neyer/dewDrop It allows a user to quickly see
+the relatively trustiness and trolliness for a user.
 
-the following is a general backend written in node to add, remove, and edit sublease type contracts.
-
-Technology/Players
-----------------------
-- Express as the web application framework.
-- Connect as the web application framework.
-- Node.js as the server platform.
-- Swagger for the REST interface specs.
-- Jasmine as the testing framework.
-- Mongoose as the object modeler for Node.js.
-- MongoDB as the x-platform document based noSQL database.
-- Istanbul as the code coverage assessment tool
-
-Documentation
-----------------------
-Each route takes the format of domain/version/route
-The route is located in the route documentation.
-The version differences are specified in each route.
-Route Example: `dev.quippics.us/api/v1/register`
-
-- Code Coverage(via Istanbul)
-  - [Code Coverage Reports](./coverage/lcov-report/index.html)
-
-- Route Documentation
-- visit http://localhost:PORT/docs to see the documentation
-- [Connecting Routes to Interface (Right Click and Save-As)](./docs/InterfaceRouteInfo.pdf)
-
-Test Cases
-----------------------
-Test cases are bundled into logical groups
-
+TODO
+=======
+- [ ] Mobile layout friendly
+- [ ] Host elsewhere
+- [ ] Use a smaller library for graphics
+- [ ] Get rid of the home screen which confuses a user into thinking a password is required.
