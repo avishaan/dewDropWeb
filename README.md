@@ -15,4 +15,5 @@ TODO
 - [ ] Mobile layout friendly
 - [ ] Host elsewhere
 - [ ] Use a smaller library for graphics
+- [ ] Incorporate a logo
 - [ ] Get rid of the home screen which confuses a user into thinking a password is required.
