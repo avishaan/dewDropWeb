@@ -10,7 +10,6 @@ var swaggerMetadata = swaggerTools.middleware.v2.swaggerMetadata;
 var swaggerRouter = swaggerTools.middleware.v2.swaggerRouter;
 var swaggerUi = swaggerTools.middleware.v2.swaggerUi;
 var swaggerValidator = swaggerTools.middleware.v2.swaggerValidator;
-var db = require('./dbs/db');
 var config = require('./config.js');
 var logger = require('./loggers/logger.js');
 var express = require('express');

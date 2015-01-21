@@ -1,6 +1,5 @@
 var querystring = require('querystring');
 var logger = require('./../loggers/logger.js');
-var User = require('./../models/user.js');
 var config = require('../config.js');
 
 module.exports.readHandle = function readHandle (req, res, next) {
